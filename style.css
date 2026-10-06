@@ -1,0 +1,53 @@
+body {
+    background-color: #111; /* Dunkler Hintergrund */
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace; /* Monospace Schrift */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cursor {
+    color: #ff5722; /* Das Orange */
+    animation: blink 1s infinite;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.2rem;
+    margin-top: 0;
+    font-family: sans-serif; /* Für den Untertitel eine saubere Schrift */
+}
+
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: #888;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

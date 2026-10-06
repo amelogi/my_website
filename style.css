@@ -1,53 +1,201 @@
+/* --- Grundeinstellungen --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #111; /* Dunkler Hintergrund */
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace; /* Monospace Schrift */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
 }
 
-.container {
+/* --- Sanfter Lichtschein im Hintergrund --- */
+.bg-glow {
+    position: fixed;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 87, 34, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- Die Karte --- */
+.card {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
     text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: fadeUp 0.8s ease-out both;
 }
 
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Avatar --- */
+.avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff5722, #ff8a65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(255, 87, 34, 0.4);
+}
+
+/* --- Name --- */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.cursor {
-    color: #ff5722; /* Das Orange */
-    animation: blink 1s infinite;
-}
-
-.subtitle {
-    color: #888;
-    font-size: 1.2rem;
-    margin-top: 0;
-    font-family: sans-serif; /* Für den Untertitel eine saubere Schrift */
-}
-
-.social-icons {
-    margin-top: 2rem;
-}
-
-.social-icons a {
-    color: #888;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
     color: #fff;
 }
 
+.cursor {
+    color: #ff5722;
+    animation: blink 1s infinite;
+}
+
 @keyframes blink {
-    0% { opacity: 1; }
+    0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-    100% { opacity: 1; }
+}
+
+/* --- Untertitel --- */
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --- Über mich --- */
+.about {
+    margin-top: 1.5rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* --- Skills --- */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.tag {
+    background: rgba(255, 87, 34, 0.12);
+    color: #ff8a65;
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* --- Buttons --- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #ff5722;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.35);
+}
+
+.btn-primary:hover {
+    background: #ff7043;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 87, 34, 0.5);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social-icons a {
+    color: #64748b;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #ff5722;
+    transform: translateY(-4px);
+    text-shadow: 0 0 15px rgba(255, 87, 34, 0.6);
+}
+
+/* --- Mobile Anpassung --- */
+@media (max-width: 480px) {
+    .card { padding: 2rem 1.5rem; }
+    h1 { font-size: 1.7rem; }
+    .avatar { width: 80px; height: 80px; font-size: 1.6rem; }
+    .buttons { flex-direction: column; }
+    .btn { justify-content: center; }
 }

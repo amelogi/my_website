@@ -25,7 +25,7 @@ body {
     transform: translateX(-50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(255, 87, 34, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
     filter: blur(80px);
     z-index: 0;
     pointer-events: none;
@@ -59,7 +59,7 @@ body {
     height: 96px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff5722, #ff8a65);
+    background: linear-gradient(135deg, #3b82f6, #93c5fd);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
-    box-shadow: 0 0 30px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.45);
 }
 
 /* --- Name --- */
@@ -79,23 +79,13 @@ h1 {
     color: #fff;
 }
 
-.cursor {
-    color: #ff5722;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
 /* --- Untertitel --- */
 .subtitle {
     color: #94a3b8;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     margin-top: 0.4rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -117,9 +107,9 @@ h1 {
 }
 
 .tag {
-    background: rgba(255, 87, 34, 0.12);
-    color: #ff8a65;
-    border: 1px solid rgba(255, 87, 34, 0.3);
+    background: rgba(59, 130, 246, 0.12);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.3);
     padding: 0.35rem 0.85rem;
     border-radius: 999px;
     font-size: 0.8rem;
@@ -148,15 +138,15 @@ h1 {
 }
 
 .btn-primary {
-    background: #ff5722;
+    background: #3b82f6;
     color: #fff;
-    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.35);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 }
 
 .btn-primary:hover {
-    background: #ff7043;
+    background: #60a5fa;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(255, 87, 34, 0.5);
+    box-shadow: 0 12px 25px rgba(59, 130, 246, 0.5);
 }
 
 .btn-secondary {
@@ -186,9 +176,9 @@ h1 {
 }
 
 .social-icons a:hover {
-    color: #ff5722;
+    color: #3b82f6;
     transform: translateY(-4px);
-    text-shadow: 0 0 15px rgba(255, 87, 34, 0.6);
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
 
 /* --- Mobile Anpassung --- */
